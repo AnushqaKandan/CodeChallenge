@@ -1,0 +1,139 @@
+
+   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #12233C;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .burger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 24px;
+    height: 20px;
+    justify-content: space-between;
+  }
+  .burger div {
+    height: 2px;
+    background: #12233C;
+    width: 100%;
+  }
+  /* Carousel Styles */
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .carousel-slide {
+    min-width: 100%;
+  }
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .prev-btn {
+    left: 10px;
+  }
+  .next-btn {
+    right: 10px;
+  }
+  /* Content Below Carousel */
+  .content {
+    padding: 20px;
+    text-align: center;
+  }
+  .content p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-right: 500px;
+    text-align:start;
+  }
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add spacing between the images */
+    margin-top: 20px;
+  }
+  .icon {
+    width: 48px; /* Adjust the width of the icons */
+    height: 48px; /* Ensure consistent height */
+  }
+  /* Info Boxes */
+  .info-boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .info-box {
+    flex: 1;
+    max-width: 350px;
+    background: #12233C;
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+  }
+  .info-box .line {
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background: #001f3f;
+    color: white;
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: blue;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .card button:hover {
+    background: #004f99;
+  }
