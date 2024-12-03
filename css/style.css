@@ -65,27 +65,39 @@
     right: 10px;
   }
   /* Content Below Carousel */
+  /* .content {
+    display: flex;
+    align-items: center;
+    width: 80%;
+  } */
   .content {
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px; /* Optional: Restrict maximum width for better aesthetics */
+    margin: 0 auto; /* Center horizontally if additional margins exist */
+    padding: 20px; /* Optional: Add padding around the content */
   }
+
+  .text-container {
+    flex: 1;
+    margin-right: 20px; /* Add spacing between text and icons */
+  }
+
   .content p {
     max-width: 800px;
     margin: 0 auto;
-    padding-right: 500px;
+    padding-right: 150px;
     text-align:start;
   }
   .icon-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Add spacing between the images */
-    margin-top: 20px;
+    gap: 2rem; /* Add spacing between the images */
+    
   }
-  .icon {
-    width: 48px; /* Adjust the width of the icons */
-    height: 48px; /* Ensure consistent height */
-  }
+
   /* Info Boxes */
   .info-boxes {
     display: flex;
@@ -102,11 +114,13 @@
     text-align: left;
     position: relative;
   }
+  
   .info-box .line {
     text-decoration: none;
     color: white;
     font-size: 3rem;
     line-height: 2.5rem;
+    font-family: sans-serif;
   }
   
   .cards {
@@ -137,3 +151,8 @@
   .card button:hover {
     background: #004f99;
   }
+
+  .more-than {
+    padding-bottom: 20px; /* Adjust as needed */
+  }
+  
