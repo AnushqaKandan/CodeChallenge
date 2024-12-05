@@ -29,8 +29,8 @@ $(document).ready(function () {
     });
   
     // Auto-slide every 5 seconds
-    setInterval(function () {
-      showSlide(currentSlide + 1);
-    }, 5000);
+    // setInterval(function () {
+    //   showSlide(currentSlide + 1);
+    // }, 5000);
   });
   
