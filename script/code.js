@@ -34,3 +34,13 @@ $(document).ready(function () {
     // }, 5000);
   });
   
+
+  // Get the elements
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menu');
+
+// Add event listener to the burger icon
+burger.addEventListener('click', () => {
+  // Toggle the menu visibility
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+});

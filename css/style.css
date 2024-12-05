@@ -14,7 +14,7 @@
   .logo img {
     height: 40px;
   }
-  .burger {
+  /* .burger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -26,8 +26,53 @@
     height: 2px;
     background: #12233C;
     width: 100%;
-  }
+  } */
 
+  .burger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    position: relative; /* Ensures it's in the normal document flow */
+    z-index: 10; /* Make sure it's above the menu */
+  }
+  
+  .burger div {
+    background-color: #333;
+    height: 4px;
+    width: 100%;
+  }
+  
+  .menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 8%; /* Position it just below the burger */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 10px;
+    z-index: 10; /* Ensures the menu is above other content */
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center the text */
+  }
+  
+  .menu ul li {
+    margin: 10px 0;
+  }
+  
+  .menu ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  
   .overlay {
     width: 38rem;
     position: absolute;
