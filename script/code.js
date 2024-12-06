@@ -28,10 +28,7 @@ $(document).ready(function () {
       showSlide(currentSlide + 1);
     });
   
-    // Auto-slide every 5 seconds
-    // setInterval(function () {
-    //   showSlide(currentSlide + 1);
-    // }, 5000);
+    
   });
   
 
@@ -44,3 +41,8 @@ burger.addEventListener('click', () => {
   // Toggle the menu visibility
   menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 });
+
+// Auto-slide every 5 seconds
+    // setInterval(function () {
+    //   showSlide(currentSlide + 1);
+    // }, 5000);

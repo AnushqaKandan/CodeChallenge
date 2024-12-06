@@ -143,6 +143,30 @@
     display: block;
   }
 
+  .carousel-btn img {
+    width: 50px; 
+    height: auto;
+    display: block; 
+  
+  /* Responsive Styling for the Button Image */
+  @media (max-width: 1024px) {
+    .carousel-btn img {
+      width: 40px; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-btn img {
+      width: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-btn img {
+      width: 25px;
+    }
+  }
+  
   
   .carousel-btn {
     font-size: 10rem; /* Larger text size */
@@ -158,15 +182,12 @@
     padding: 0;
   }
 
-  .carousel .prev-btn {
-    display: none !important;
-  }
-  
-
   .next-btn {
     right: 10px;
     top: 47%;
   }
+
+  
   /* Content Below Carousel */
   
   .content {
@@ -227,9 +248,9 @@
     }  
 
     .icon-container{
-        margin-left: 0; /* Reset margin for icon container in small screens */
-        justify-content: flex-end; /* Align the icons to the right */
-        width: 90%; /* Ensure it takes up full width to align to the right */
+        margin-left: 0; 
+        justify-content: flex-end; 
+        width: 90%; 
         margin-top: 2rem;
        
        
@@ -251,6 +272,7 @@
       width: 24px; 
       height: 24px; 
     }
+
   }
 
   /* Info Boxes */
