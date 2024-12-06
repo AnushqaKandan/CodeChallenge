@@ -425,8 +425,13 @@
     padding: 20px;
     text-align: left;
     position: relative;
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
   }
   
+.info-box:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
   .info-box .line {
     text-decoration: none;
     color: white;
@@ -528,10 +533,14 @@
     gap: 10px; 
     border: 1px solid #ccc; 
     padding: 10px;
-    
     background-color:  #244ac2;
     color: white;
-    
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+  }
+
+  .word-line:hover {
+    background-color: #12233C; 
+    transform: scale(1.05); 
   }
   .line2 {
     margin: 0;
