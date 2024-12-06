@@ -73,121 +73,155 @@
   }
   
   
-  .overlay {
-    width: 38rem;
-    position: absolute;
-    top: 63%;
-    left: 18%; /* Adjust to center overlay more effectively */
-    transform: translate(-50%, -50%);
-    background-color:  #244ac2;
-    color: white;
-    padding: 10px 20px;
-    font-size: 10px;
-    text-align: center;
-    z-index: 10; /* Ensure it appears above other elements */
-  }
+ /* Ensure the carousel has a relative position */
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+ 
+}
 
+/* Ensure overlay stays on top of everything */
+.overlay {
+  width: 38rem;
+  position: absolute;
+  top: 63%;
+  left: 18%; /* Adjust to center overlay more effectively */
+  transform: translate(-50%, -50%);
+  background-color:  #244ac2;
+  color: white;
+  padding: 10px 20px;
+  font-size: 10px;
+  text-align: center;
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+/* Underlay style (optional, if you still want it) */
+.underlay {
+  position: absolute;
+  right: 0;
+  top: 58%;
+  z-index: 1;
+  color: #ccc;
+  font-size: 36px;
+  background-color:black;
+  color: black;
+  padding: 10px 20px;
+  font-size: 10px;
+  width: 10rem;
+}
+
+/* Hide underlay on smaller screens */
+@media (max-width: 1199px) {
   .underlay {
-    position: absolute;
-    right: 0;
-    top: 58%;
-    z-index: 1;
-    color: #ccc;
-    font-size: 36px;
-    background-color:black;
-    color: black;
-    padding: 10px 20px;
-    font-size: 10px;
-    width: 10rem;
+    display: none;
   }
+  
+}
 
-  @media (max-width: 1199px) {
-    .underlay {
-      display: none;
-    }
-    
+@media (max-width: 1005px) {
+  .overlay {
+    top: 45%;
   }
+}
 
-  @media (max-width: 1005px) {
-    .overlay {
-      top: 45%;
-    }
+@media (max-width: 555px) {
+  .overlay {
+    top: 30%;
   }
+}
 
-  @media (max-width: 555px) {
-    .overlay {
-      top: 30%;
-    }
-  }
+/* Carousel slides setup */
+.carousel-slides {
+  position: relative; 
+  z-index: 1;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
 
-  /* Carousel Styles */
-  .carousel {
-    position: relative;
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    overflow: hidden;
-  }
-  .carousel-slides {
-    position: relative; /* Needed to keep carousel slides below overlay */
-    z-index: 1; /* Ensure it's below the overlay */
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  .carousel-slide {
-    min-width: 100%;
-  }
-  .carousel-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+.carousel-slide {
+  min-width: 100%;
+}
 
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Button Styling */
+.carousel-btn {
+  font-size: 10rem; /* Larger button text */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.10);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 50; /* Ensure buttons are on top of images */
+  padding: 0;
+}
+
+/* Responsive button image sizes */
+.carousel-btn img {
+  width: 50px;
+  height: auto;
+  display: block;
+}
+
+/* Smaller button sizes for different screen widths */
+@media (max-width: 1024px) {
   .carousel-btn img {
-    width: 50px; 
-    height: auto;
-    display: block; 
-  
-  /* Responsive Styling for the Button Image */
-  @media (max-width: 1024px) {
-    .carousel-btn img {
-      width: 40px; 
-    }
+    width: 40px;
   }
-  
-  @media (max-width: 768px) {
-    .carousel-btn img {
-      width: 30px;
-    }
+}
+
+@media (max-width: 768px) {
+  .carousel-btn img {
+    width: 30px;
   }
-  
-  @media (max-width: 480px) {
-    .carousel-btn img {
-      width: 25px;
-    }
+}
+
+@media (max-width: 480px) {
+  .carousel-btn img {
+    width: 25px;
   }
-  
-  
-  .carousel-btn {
-    font-size: 10rem; /* Larger text size */
+}
+
+/* Position for next button */
+.next-btn {
+  right: 10px;
+  top: 47%;
+}
+
+  /* Pagination indicator */
+  .pagination{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.10);
-    border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
+    display: block;
+    right: 2rem;
+    bottom: 40px;
     z-index: 10;
-    padding: 0;
-  }
+    text-align: center;
+}
+.pagination span{
+    background-image: url(/assets/indicator.png);
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 1px;
+}
+.pagination span.active{
+    opacity: 0.39;
+    transform: rotate(160deg);
+}
 
-  .next-btn {
-    right: 10px;
-    top: 47%;
-  }
-
-  
   /* Content Below Carousel */
   
   .content {
@@ -223,7 +257,7 @@
   @media (max-width: 1235px) {
     .content p {
       max-width: 1500px;
-      padding-right: 0;
+      padding: 0;
       text-align:start;
     }  
    
@@ -252,8 +286,6 @@
         justify-content: flex-end; 
         width: 90%; 
         margin-top: 2rem;
-       
-       
     }
   }
 
