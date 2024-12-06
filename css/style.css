@@ -98,7 +98,7 @@
 .underlay {
   position: absolute;
   right: 0;
-  top: 58%;
+  top: 60%;
   z-index: 1;
   color: #ccc;
   font-size: 36px;
