@@ -9,7 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 10px;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 
   }
 
@@ -21,19 +22,7 @@
   .logo img {
     height: 40px;
   }
-  /* .burger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    width: 24px;
-    height: 20px;
-    justify-content: space-between;
-  }
-  .burger div {
-    height: 2px;
-    background: #12233C;
-    width: 100%;
-  } */
+
 
   .burger {
     cursor: pointer;
